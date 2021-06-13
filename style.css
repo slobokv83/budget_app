@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+  color: rgb(0, 0, 0);
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /*Overwritten*/
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+h2 {
+  padding: 0 0 20px 0;
+  margin: 0; /*Move Header to the left 0 220px 10px 0*/
+}
+
+h3 {
+  margin: 0;
+}
+
+.container {
+  margin: 50px 0 0 50px; /*Move Forms to the left*/
+  width: 100%;
+}
+
+.budget-img,
+.expenses-img,
+.balance-img {
+  height: 35px; /*Change image size*/
+  margin: 20px 0 20px 0;
+}
+
+label {
+  display: inline-block;
+  margin: 5px 0 5px 0;
+}
+
+input[id="budgeting"] {
+  border: 2px solid #3cb371;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+input[id="expense"],
+input[id="amount"] {
+  border: 2px solid #b22222;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+.form1 {
+  border: 2px solid #3cb371;
+  border-radius: 5px;
+  padding: 10px;
+  width: 350px;
+  margin: 0;
+}
+
+.form2 {
+  border: 2px solid #b22222;
+  border-radius: 5px;
+  padding: 10px;
+  width: 350px;
+  margin: 0;
+}
+
+.add {
+  color: #b22222;
+  border: 2px solid #b22222;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0;
+}
+
+.calculate {
+  color: #3cb371;
+  border: 2px solid #3cb371;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0;
+}
+
+.showcase1,
+.showcase2 {
+  display: inline-flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.budget-list {
+  text-align: center;
+  width: 120px;
+  margin: 0 100px 0 60px;
+  padding: 0;
+}
+
+.expenses-list {
+  text-align: center;
+  width: 120px;
+  margin: 0 100px 0 0;
+}
+
+.balance-list {
+  text-align: center;
+  width: 120px;
+  margin: 0;
+}
+
+/* .form1-list {
+  /* display: inline-block; */
+/* border: 2px solid #000; */
+/* } */
+
+/* .form2-list { */
+/* display: inline-block; */
+/* border: 2px solid #000; */
+/* } */
+
+.expense-title-list {
+  text-align: center;
+  width: 120px;
+  margin: 0 100px 0 60px;
+}
+
+.expense-value-list {
+  text-align: center;
+  width: 120px;
+  margin: 0 100px 0 0;
+}
+
+.text1,
+.text3 {
+  margin: 0;
+  padding: 0;
+  color: #3cb371;
+  font-size: 35px;
+}
+
+.text2 {
+  margin: 0;
+  padding: 0;
+  color: #b22222;
+  font-size: 35px;
+}
+
+.list1 {
+  list-style-type: none;
+  color: #b22222;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.list1 > li:before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+.list2,
+.list3 {
+  text-align: center;
+  list-style-type: none;
+  color: #b22222;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+}
+
+.edit-delete {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.edit-delete-list {
+  text-align: center;
+}
+
+.fa-trash {
+  color: #b22222;
+  font-size: 16px;
+}
+
+.fa-edit {
+  color: rgb(10, 98, 129);
+  font-size: 16px;
+}
+
+i:hover {
+  box-shadow: 1px 1px 2px;
+}
+
+i:active {
+  box-shadow: 0 0 2px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 200px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

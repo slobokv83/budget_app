@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <title>Budget App</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>BUDGET APP</h2>
+        <ul class="showcase1">
+
+            <li class="form1-list">
+                <form id="form1" class="form1">
+                <div class="form1-control">
+                    <label for="budgeting">Please Enter Your Budget</label>
+                    <input type="number" id="budgeting" placeholder="Enter budget..." />
+                    <!-- <small>Error message</small> -->
+                </div>
+                <button class="calculate">Calculate</button>
+                </form>
+            </li>
+            <li class="budget-list">
+                <!-- <div class="budget"></div> -->
+                <h3>BUDGET</h3>
+                <!-- <label for="budget">BUDGET</label> -->
+                <img src="img/budget.png" alt="" class="budget-img" />
+                <p class="text1"><b>$ </b><span id="budget-count"><b>0</b></span>
+            </li>
+            <li class="expenses-list">
+                <!-- <div class="expenses"></div> -->
+                <h3>EXPENSES</h3>
+                <!-- <label for="expenses">EXPENSES</label> -->
+                <img src="img/expenses.png" alt="" class="expenses-img" />
+                <p class="text2"><b>$ </b><span id="expenses-count"><b>0</b></span>
+            </li>
+            <li class="balance-list">
+                <!-- <div class="balance"></div> -->
+                <h3>BALANCE</h3>
+                <!-- <label for="balance">BALANCE</label> -->
+                <img src="img/balance.png" alt="" class="balance-img" />
+                <p class="text3"><b>$ </b><span id="balance-count"><b>0</b></span>
+            </li>
+        </ul>
+
+        <!-- <img src="money.png" alt="" class="money-img" /> -->
+        <br>
+        <ul class="showcase2">
+            <li class="form2-list">
+                <form id="form2" class="form2">
+                    <div class="form2-control">
+                        <label for="expense">Please Enter Your Expense</label>
+                        <input type="text" id="expense" placeholder="Enter expense..." />
+                        <!-- <small>Error message</small> -->
+                    </div>
+                    <div class="form2-control">
+                        <label for="amount">Please Enter Expense Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount..." />
+                        <!-- <small>Error message</small> -->
+                    </div>
+                    <button class="add">Add Expense</button>
+                </form>
+            </li>
+            <li class="expense-title-list">
+                <div class="expense-title"></div>
+                <label for="expense-title">Expense Title</label>
+                <ul id="list1" class="list1">
+                    <!-- <li class="minus">
+                      Cash <span>-$400</span><button class="delete-btn">x</button>
+                    </li> -->
+                  </ul>
+            </li>
+            <li class="expense-value-list">
+                <div class="expense-value"></div>
+                <label for="expense-value">Expense Value</label>
+                <ul id="list2" class="list2">
+                    <!-- <li class="minus">
+                      Cash <span>-$400</span><button class="delete-btn">x</button>
+                    </li> -->
+                  </ul>
+            </li>
+            <li class="edit-delete-list">
+                <div class="edit-delete"></div>
+                <label id="master-clear" for="edit-delete"><i id="clear" class="fas fa-trash" ></i></label>
+                <ul id="list3" class="list3">
+                    <!-- <li class="minus">
+                      Cash <span>-$400</span><button class="delete-btn">x</button>
+                    </li> -->
+                  </ul>
+            </li>                 
+        </ul>
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form  id="form-container" class="form-container">
+          <h1>Edit</h1>
+      
+          <label for="expense-popup"><b>Edit Expense</b></label>
+          <input type="text" id="expense-popup" placeholder="Enter expense..." />
+      
+          <label for="amount-popup"><b>Edit Amount</b></label>
+          <input type="number" id="amount-popup" placeholder="Enter expense..." />
+      
+          <button id="btn" class="btn">Accept</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
